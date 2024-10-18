@@ -1,0 +1,28 @@
+version: '3'
+services:
+  author:
+    build:
+      context: .
+      target: author
+    ports:
+      - "4502:4502"
+    volumes:
+      - ./logs/author:/aem/crx-quickstart/logs
+    networks:
+      - aem_network
+
+  publish:
+    build:
+      context: .
+      target: publish
+    ports:
+      - "4503:4503"
+    volumes:
+      - ./logs/publish:/aem/crx-quickstart/logs
+    networks:
+      - aem_network
+
+networks:
+  aem_network:
+    driver: bridge
+ 
