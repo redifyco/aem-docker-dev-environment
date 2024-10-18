@@ -7,8 +7,8 @@ Folder structure:
 docker-aem/
 ├── install/ # Put files here to auto-install
 ├── logs/
-│   ├── author/   
-│   ├── publish/  
+│   ├── author/ 
+│   ├── publish/ 
 ├── dispatcher/
 │   ├── Dockerfile
 │   ├── dispatcher-apache2.4-4.3.7.so
@@ -17,6 +17,7 @@ docker-aem/
 ├── start-aem.sh                  # Shared startup script
 ├── docker-compose.yml
 └── Dockerfile                    #multistage configuration
+
 
 
 We are working on dispatcher configuration to improve automation during development.
