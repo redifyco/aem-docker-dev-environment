@@ -1,0 +1,33 @@
+/farms {
+    /publish {
+        /clientheaders {
+            "authorization"
+            "from"
+            "referer"
+            "user-agent"
+            "x-forwarded-for"
+        }
+        /renders {
+            /rend01 {
+                /hostname "aem-publish"
+                /port "4503"
+            }
+        }
+        /filter {
+            # Allowing all requests (for testing purposes)
+            /0001 {
+                /type "allow"
+                /url "/"
+            }
+        }
+        /cache {
+            /docroot "/var/www/html"
+            /rules {
+                /0000 {
+                    /glob "*"
+                    /type "allow"
+                }
+            }
+        }
+    }
+}
